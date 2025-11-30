@@ -8,7 +8,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>US Wetland Data Visualization for Bureau of Land Management Conservation Strategies</title>
 
-
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
 
@@ -17,6 +16,15 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="icon" href="./static/images/favicon.png">
+
+  <!-- 공통 본문 폭 제한 -->
+  <style>
+    .narrow-text {
+      max-width: 48rem;   /* Introduction 컬럼(is-four-fifths)과 비슷한 폭 */
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
 </head>
 <body>
 
@@ -50,9 +58,9 @@
 <section class="section">
   <div class="columns is-centered has-text-centered">
     <div class="column is-four-fifths">
-      <h2 class="title is-3">Abstract</h2
+      <h2 class="title is-3">Abstract</h2>
 
-      <div class="content has-text-justified">
+      <div class="content has-text-justified narrow-text">
         <p>
           This project provides a spatially explicit assessment of wetland integrity across Bureau of Land Management (BLM) lands in the United States, using ecological monitoring data from the BLM National AIM Riparian and Wetland Indicators Hub. Through Python-based processing, visualization, and interactive mapping, we analyzed biodiversity using Shannon entropy and Hill’s N1, and ecological condition using the Mean C value. Results reveal substantial regional disparities: Nevada, Idaho, and Utah contain the highest concentration of degraded wetlands (Hill’s N1 ≤ 8.0, C Value ≤ 3.0), largely driven by arid climates and land-use pressures. In contrast, Alaska and parts of the central U.S. show higher diversity and stronger ecological stability. Hydrogeomorphic (HGM) analyses highlight the dominance of Slope and Riverine wetlands across the West, while vegetation metrics show elevated non-native plant presence in disturbed regions. Collectively, these findings emphasize the need for region-specific conservation strategies, targeted restoration, and improved long-term monitoring. The study demonstrates how integrated ecological indicators and geospatial visualization can support data-driven decision-making for wetland conservation across federally managed landscapes.
         </p>
@@ -77,7 +85,7 @@
     <div class="column is-four-fifths">
       <h2 class="title is-3">Introduction</h2>
 
-      <div class="content has-text-justified">
+      <div class="content has-text-justified narrow-text">
         <p>
           Wetlands play a vital role in maintaining ecological balance by supporting biodiversity, regulating 
 hydrological cycles, and improving water quality. In the United States, many of these critical ecosystems 
@@ -128,7 +136,7 @@ environmental stress factors to enhance the resilience of U.S. wetland ecosystem
     <div class="column is-four-fifths">
       <h2 class="title is-3">Methodology</h2>
 
-      <div class="content has-text-justified">
+      <div class="content has-text-justified narrow-text">
         <p>
           Data from the BLM National AIM Riparian and Wetland Indicators Hub (Bureau of Land Management, 2025) 
           was analyzed to assess the ecological diversity and health of wetlands across the contiguous United States. 
@@ -177,13 +185,13 @@ environmental stress factors to enhance the resilience of U.S. wetland ecosystem
           <figure class="image has-text-centered" style="margin-bottom: 1rem;">
             <img src="./static/images/heatmap_HGM_by_WetlandType.png"
                  alt="HGM classes by wetland type"
-                 style="display: inline-block; width: 90%; height: auto;">
+                 style="display: inline-block; width: 100%; height: auto;">
             <figcaption class="is-size-6 has-text-grey">
               Figure 3. Heatmap illustrating how HGM classes vary across wetland types under BLM management.
             </figcaption>
           </figure>
 
-          <p class="has-text-justified">
+          <p class="has-text-justified narrow-text">
             Figure 3 shows that Slope and Riverine wetlands dominate many western regions, indicating terrain-driven 
             hydrology and strong surface flow influence. In contrast, Depression and Flat types are more common in 
             lowland or coastal areas, reflecting greater water retention and limited drainage.
@@ -201,13 +209,13 @@ environmental stress factors to enhance the resilience of U.S. wetland ecosystem
           <figure class="image has-text-centered" style="margin-bottom: 1rem;">
             <img src="./static/images/heatmap_HGM_by_State.png"
                  alt="HGM classes by state"
-                 style="display: inline-block; width: 90%; height: auto;">
+                 style="display: inline-block; width: 100%; height: auto;">
             <figcaption class="is-size-6 has-text-grey">
               Figure 4. Heatmap showing differences in HGM class composition across BLM-managed states.
             </figcaption>
           </figure>
 
-          <p class="has-text-justified">
+          <p class="has-text-justified narrow-text">
             Figure 4 highlights how HGM composition varies across states. Nevada, Utah, and Wyoming exhibit simpler, 
             arid-adapted structures, while Oregon and Colorado show more balanced and diverse class distributions. 
             These differences reflect how geomorphology and hydrology shape ecosystem function across landscapes.
@@ -217,7 +225,7 @@ environmental stress factors to enhance the resilience of U.S. wetland ecosystem
       </div>
     </div>
 
-    <div class="content has-text-justified" style="margin-top: 1.5rem;">
+    <div class="content has-text-justified narrow-text" style="margin-top: 1.5rem;">
       <p>
         Together, Figure 3 and 4 demonstrate that wetland geomorphology—and thus ecological function—differs 
         significantly across regions. As a result, management and restoration strategies must be tailored to the 
@@ -246,7 +254,7 @@ environmental stress factors to enhance the resilience of U.S. wetland ecosystem
       </figcaption>
     </figure>
 
-    <div class="content has-text-justified">
+    <div class="content has-text-justified narrow-text">
       <p>
         Figure 5 illustrates how vegetation composition varies across BLM-managed states. Oregon and Utah 
         show notably higher proportions of non-native vegetation, suggesting stronger ecological disturbance 
@@ -265,7 +273,7 @@ environmental stress factors to enhance the resilience of U.S. wetland ecosystem
       </figcaption>
     </figure>
 
-    <div class="content has-text-justified">
+    <div class="content has-text-justified narrow-text">
       <p>
         Figure 6 shows a strong positive relationship between Hill’s N1 (species diversity) and the average 
         C value (ecological integrity). Wetlands with higher species diversity tend to exhibit healthier ecological 
@@ -303,7 +311,7 @@ environmental stress factors to enhance the resilience of U.S. wetland ecosystem
       </figcaption>
     </figure>
 
-    <div class="content has-text-justified">
+    <div class="content has-text-justified narrow-text">
       <p>
         Figure 7 illustrates spatial patterns of wetland condition across BLM-managed sites using an interactive map.
         Each point represents a monitored wetland, with circle size proportional to Hill’s N1 and color indicating the 
@@ -321,7 +329,7 @@ environmental stress factors to enhance the resilience of U.S. wetland ecosystem
       </figcaption>
     </figure>
 
-    <div class="content has-text-justified">
+    <div class="content has-text-justified narrow-text">
       <p>
         Figure 8 shows that low-quality wetlands are most concentrated in Nevada, Idaho, and California due to 
         aridity and land-use pressure. In contrast, Alaska and Wyoming feature relatively few low-quality sites, 
@@ -343,7 +351,7 @@ environmental stress factors to enhance the resilience of U.S. wetland ecosystem
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Conclusion</h2>
 
-    <div class="content has-text-justified">
+    <div class="content has-text-justified narrow-text">
       <p>
         The analysis demonstrates clear ecological heterogeneity among wetlands managed by the Bureau of Land Management (BLM), revealing both regional strengths and areas of concern. Across 875 evaluated sites, 254 were classified as degraded (Hill’s N1 ≤ 8.0, C Value ≤ 3.0), primarily concentrated in Nevada, Idaho, and Utah, where arid climates and land-use intensity constrain ecological recovery and reduce native vegetation.
       </p>
@@ -368,7 +376,7 @@ environmental stress factors to enhance the resilience of U.S. wetland ecosystem
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Future Research</h2>
 
-    <div class="content has-text-justified">
+    <div class="content has-text-justified narrow-text">
       <p>
         This study provides a spatially explicit understanding of wetland integrity across BLM-managed lands, but several limitations suggest clear directions for future research. The analysis relied primarily on AIM monitoring data, which may not capture temporal or seasonal variation in biodiversity and hydrology. Future studies should integrate multi-year datasets and remote sensing indicators such as NDVI, soil moisture, and evapotranspiration to identify longer-term ecological trends.
       </p>
@@ -394,7 +402,7 @@ environmental stress factors to enhance the resilience of U.S. wetland ecosystem
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">References & Data Sources</h2>
 
-    <div class="content has-text-justified">
+    <div class="content has-text-justified narrow-text">
 
       <p>
         <strong>Figure 1 Source:</strong>  
@@ -427,7 +435,7 @@ environmental stress factors to enhance the resilience of U.S. wetland ecosystem
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Contact Information</h2>
 
-    <div class="content has-text-justified">
+    <div class="content has-text-justified narrow-text">
 
       <p>
         <strong>Juhyun Lee</strong><br>
@@ -440,7 +448,7 @@ environmental stress factors to enhance the resilience of U.S. wetland ecosystem
 
       <p>
         <strong>Jiwon Jung</strong><br>
-        <i class="fas fa-envelope"></i> jjung44@gm<u></u>u.edu<br>
+        <i class="fas fa-envelope"></i> jjung44@gmu.edu<br>
         <i class="fab fa-linkedin"></i> 
         <a href="https://www.linkedin.com/in/jiwon-jung-649096350/" target="_blank" rel="noopener">
           www.linkedin.com/in/jiwon-jung-649096350/
@@ -478,4 +486,3 @@ environmental stress factors to enhance the resilience of U.S. wetland ecosystem
 
 </body>
 </html>
-
